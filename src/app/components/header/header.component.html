@@ -1,0 +1,9 @@
+<header>
+  <h1>{{ title }}</h1>
+  <app-button
+    *ngIf="isRoute('/')"
+    color="{{ buttonState ? 'red' : 'green' }}"
+    text="{{ buttonState ? 'Close' : 'Add' }}"
+    (toggleFormEventEmitted)="toggleAddButtonState()"
+  ></app-button>
+</header>
